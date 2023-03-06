@@ -2,7 +2,6 @@ from langchain import OpenAI, LLMChain, PromptTemplate
 from langchain.chains.conversation.memory import ConversationalBufferWindowMemory
 import streamlit as st
 from streamlit_chat import message
-from styles import inject_ga, contact_form, feedback_form
 
 def open_file(filepath):
         with open(filepath, 'r', encoding='utf-8') as infile:
@@ -66,14 +65,3 @@ else:
             Please see https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0 \
             for more information. ")
 
-st.sidebar.header("WroteScan :necktie:")
-
-st.sidebar.write("\n Feedback? Please feel free to send us an anonymous message")
-st.sidebar.markdown(feedback_form, unsafe_allow_html=True)
-st.sidebar.write("")
-
-st.sidebar.write("\n\nWant to learn more? Contact us")
-st.sidebar.markdown(contact_form, unsafe_allow_html=True)
-
-st.sidebar.write("")
-st.sidebar.write("Try AI party games at [www.aicharades.com](https://www.aicharades.com/)")
